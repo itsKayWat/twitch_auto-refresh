@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Twitch Auto Refresh Settings</h2>
+            <p class="subtitle">Configure auto-refresh behavior for Twitch.tv streams</p>
+        </div>
+        
+        <div class="settings-group">
+            <h3>General Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Enable Auto Refresh</label>
+                    <span class="description">Automatically refresh when stream goes offline</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="enableAutoRefresh">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Auto-start on Live Streams</label>
+                    <span class="description">Automatically enable refresh when entering live streams</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="autoStartOnLive">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h3>Refresh Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label for="refreshInterval">Refresh Interval (seconds)</label>
+                    <span class="description">Time to wait between refresh attempts</span>
+                </div>
+                <input type="number" id="refreshInterval" min="5" max="60" value="15">
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label for="maxRetries">Max Retry Attempts</label>
+                    <span class="description">Maximum number of refresh attempts before stopping</span>
+                </div>
+                <input type="number" id="maxRetries" min="1" max="20" value="5">
+            </div>
+            
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label for="initialDelay">Initial Delay (seconds)</label>
+                    <span class="description">Wait time before first refresh attempt</span>
+                </div>
+                <input type="number" id="initialDelay" min="1" max="30" value="5">
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h3>Detection Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Check Video Playback</label>
+                    <span class="description">Monitor video player status for issues</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="checkVideoPlayback" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Check Network Status</label>
+                    <span class="description">Monitor network connectivity issues</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="checkNetworkStatus" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Check Bot Detection</label>
+                    <span class="description">Monitor for bot verification pages</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="checkBotDetection" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-group">
+            <h3>Display Settings</h3>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Show Status Messages</label>
+                    <span class="description">Display refresh status and countdown messages</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="showStatus" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Show Overlay Icon</label>
+                    <span class="description">Display the 'T' indicator when active</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="showOverlay" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label>Desktop Notifications</label>
+                    <span class="description">Show notifications when refresh occurs</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="showNotifications">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="closeSettings">Close</button>
+            <button id="openReadme">README</button>
+            <button id="resetDefaults">Reset to Defaults</button>
+            <button id="saveSettings" class="primary">Save Settings</button>
+        </div>
+
+        <div class="footer">
+            <div class="coffee-section">
+                <h3>☕️ Fuel the Development!</h3>
+                <p>Created with ❤️ by KayWat</p>
+                <p class="subtitle">Your coffee keeps the updates coming and helps maintain this free tool for everyone!</p>
+                <a href="https://www.buymeacoffee.com/kaywat" target="_blank" class="coffee-button">Buy me a coffee ☕️</a>
+            </div>
+            <div class="bottom-text">
+                <p>Check out our other tools: <a href="https://onpoint.fixmyapple.org" target="_blank">OnPoint</a></p>
+                <p>© 2024 KayWat. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
